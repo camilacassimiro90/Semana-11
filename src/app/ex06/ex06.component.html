@@ -1,1 +1,46 @@
-<p>ex06 works!</p>
+<div class="container-fluid">
+  <form>
+    <div class="form-group">
+      <label>Nome</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="user.nome"
+        name="nome"
+      />
+      {{ user.nome }}
+    </div>
+    <div class="form-group">
+      <label>CPF</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="user.cpf"
+        name="cpf"
+      />
+      {{ user.cpf }}
+    </div>
+    <div class="form-group">
+      <label>Dia do aniversário</label>
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="user.diaNiver"
+        name="diaNiver"
+      />
+      {{ user.diaNiver }}
+    </div>
+    <div class="form-group">
+      <label>Senha</label>
+      <input
+        type="password"
+        class="form-control"
+        [(ngModel)]="user.senha"
+        name="text"
+      />
+      {{ user.senha }}
+    </div>
+
+    <button (click)="cadastrar()" type="submit" class="btn btn-primary">Cadastrar</button>
+  </form>
+</div>
