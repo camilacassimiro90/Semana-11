@@ -7,11 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'semanaOnze';
- 
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
   
