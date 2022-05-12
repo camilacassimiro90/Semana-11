@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ex02.component.scss']
 })
 export class Ex02Component implements OnInit {
+  modeOn:boolean = true;
 
   constructor() { }
 

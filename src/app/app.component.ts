@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'semanaOnze';
-  modeOn:boolean = true;
-
+ 
   constructor() { }
 
   ngOnInit(): void {
