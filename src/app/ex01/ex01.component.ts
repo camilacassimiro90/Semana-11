@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ex01.component.scss']
 })
 export class Ex01Component implements OnInit {
+  check:boolean = false
 
   constructor() { }
 
