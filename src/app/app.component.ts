@@ -8,9 +8,26 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
- 
+  showModal:boolean = false;
+
+  user: any = {
+    nome:"",
+    cpf:"",
+    email:"",
+    nomePet:"",
+    idPet:""
+
+  }
   
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
+  showInformations(){
+    if(this.user.nome && this.user.cpf && this.user.email && this.user.nomePet && this.user.idPet){
+      this.showModal = true
+      console.log('Nome:', this.user.nome)
+    }
+  }
 }
