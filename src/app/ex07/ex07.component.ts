@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-ex07',
+  templateUrl: './ex07.component.html',
+  styleUrls: ['./ex07.component.scss']
 })
-export class AppComponent {
-  title = 'semanaOnze';
+export class Ex07Component implements OnInit {
   user: any = {
     nome:"",
     cpf:"",
@@ -14,7 +13,7 @@ export class AppComponent {
     senha:"",
   }
 
-  
+
   constructor() { }
 
   ngOnInit(): void {
