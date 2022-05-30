@@ -1,13 +1,11 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-ex09',
+  templateUrl: './ex09.component.html',
+  styleUrls: ['./ex09.component.scss']
 })
-export class AppComponent {
-
+export class Ex09Component implements OnInit {
   showModal: boolean = false;
 
   user: any = {

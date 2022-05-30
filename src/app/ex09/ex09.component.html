@@ -1,0 +1,133 @@
+<div class="container">
+  <form action="" #form="ngForm" (submit)="showInformations()">
+    <h4 class="mb-3">Cadastro</h4>
+    <div class="col-sm-6">
+      <label for="" class="form-label">Nome do dono</label>
+      <input
+        #nome="ngModel"
+        name="nomeDono"
+        [(ngModel)]="user.nome"
+        type="text"
+        class="form-control"
+        #nomeDono="ngModel"
+        required
+      />
+      <small
+        *ngIf="!(nomeDono.valid || nomeDono.pristine)"
+        class="form-text text-danger"
+        >Campo precisa ser preenchido
+      </small>
+    </div>
+    <div class="col-sm-6">
+      <label for="" class="form-label">CPF</label>
+      <input
+        #cpf="ngModel"
+        name="cpf"
+        [(ngModel)]="user.cpf"
+        type="text"
+        class="form-control"
+        minlength="11"
+        required
+      />
+    </div>
+    <small *ngIf="!(cpf.valid || cpf.pristine)" class="form-text text-danger"
+      >Campo precisa ser preenchido
+    </small>
+    <div class="col-sm-6">
+      <label for="" class="form-label">Email:</label>
+      <input
+        #email="ngModel"
+        name="email"
+        [(ngModel)]="user.email"
+        type="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        class="form-control"
+        required
+      />
+    </div>
+    <small
+      *ngIf="!(email.valid || email.pristine)"
+      class="form-text text-danger"
+      >Campo precisa ser preenchido
+    </small>
+    <div class="col-sm-6">
+      <label for="" class="form-label">Nome do animal:</label>
+      <input
+        #dono="ngModel"
+        name="nomePet"
+        [(ngModel)]="user.nomePet"
+        type="text"
+        class="form-control"
+        required
+      />
+    </div>
+    <small *ngIf="!(dono.valid || dono.pristine)" class="form-text text-danger"
+      >Campo precisa ser preenchido
+    </small>
+    <div class="col-sm-6">
+      <label for="" class="form-label"
+        >Código de identificação do animal:</label
+      >
+      <input
+        #idPet="ngModel"
+        name="idPet"
+        [(ngModel)]="user.idPet"
+        type="text"
+        class="form-control"
+        required
+      />
+    </div>
+    <small
+      *ngIf="!(idPet.valid || idPet.pristine)"
+      class="form-text text-danger"
+      >Campo precisa ser preenchido
+    </small>
+    <button
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      [disabled]="!form.valid"
+      type="submit"
+      class="mt-3"
+    >
+      Salvar
+    </button>
+  </form>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Dados Cadastrados</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <h5>Dados informados</h5>
+        <p>Nome: {{ user.nome }}</p>
+        <p>CPF: {{ user.cpf }}</p>
+        <p>Email {{ user.email }}</p>
+        <p>Nome do animal: {{ user.nomePet }}</p>
+        <p>Código identificado do animal: {{ user.idPet }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
