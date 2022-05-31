@@ -13,6 +13,7 @@ import { Ex06Component } from './ex06/ex06.component';
 import { Ex07Component } from './ex07/ex07.component';
 import { Ex08Component } from './ex08/ex08.component';
 import { Ex09Component } from './ex09/ex09.component';
+import { Ex10Component } from './ex10/ex10.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { Ex09Component } from './ex09/ex09.component';
     Ex06Component,
     Ex07Component,
     Ex08Component,
-    Ex09Component
+    Ex09Component,
+    Ex10Component
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Inserir tarefa:</h2>
+  <input type="text" [(ngModel)]="lista" />
+  <button class="btn btn-primary" (click)="addItem()">inserir</button>
+</div>
+
+<div class="container">
+  <ul>
+    <p *ngIf="tarefas.length == 0">Sem tarefas</p>
+    <li *ngFor="let item of tarefas">{{ item }}</li>
+  </ul>
+</div>
